@@ -1,0 +1,19 @@
+{
+  "title": "Generador de Contraseñas",
+  "characterLength": "Longitud de Caracteres",
+  "includeUppercase": "Incluir Letras Mayúsculas",
+  "includeLowercase": "Incluir Letras Minúsculas",
+  "includeNumbers": "Incluir Números",
+  "includeSpecialCharacters": "Incluir Caracteres Especiales",
+  "strength": "Seguridad",
+  "strengths": {
+    "weak": "Débil",
+    "medium": "Medio",
+    "strong": "Fuerte"
+  },
+  "generate": "Generar",
+  "copy": {
+    "success": "¡Contraseña copiada al portapapeles!",
+    "error": "Error al copiar la contraseña al portapapeles."
+  }
+}

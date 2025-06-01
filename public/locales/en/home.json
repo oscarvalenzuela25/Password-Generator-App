@@ -1,0 +1,19 @@
+{
+  "title": "Password Generator",
+  "characterLength": "Character Length",
+  "includeUppercase": "Include Uppercase Letters",
+  "includeLowercase": "Include Lowercase Letters",
+  "includeNumbers": "Include Numbers",
+  "includeSpecialCharacters": "Include Special Characters",
+  "strength": "Strength",
+  "strengths": {
+    "weak": "Weak",
+    "medium": "Medium",
+    "strong": "Strong"
+  },
+  "generate": "Generate",
+  "copy": {
+    "success": "Password copied to clipboard!",
+    "error": "Failed to copy password to clipboard."
+  }
+}
