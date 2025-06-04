@@ -1,11 +1,11 @@
 body {
-  color: var(--text-primary-color-dark);
+  color: var(--text-primary-color-light);
 }
 
 .container {
   width: 100%;
   height: 100dvh;
-  background: var(--background-primary-color-dark);
+  background: var(--background-primary-color-light);
 }
 
 .main {
@@ -24,7 +24,7 @@ body {
 
 .passwordContainer__title {
   font-size: 24px;
-  color: var(--text-secondary-color-dark);
+  color: var(--text-secondary-color-light);
   margin-bottom: 32px;
   text-align: center;
 }

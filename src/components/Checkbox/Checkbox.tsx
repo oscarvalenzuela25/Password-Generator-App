@@ -1,5 +1,7 @@
 import React, { type FC } from "react";
 import darkStyles from "./styles/Checkbox.dark.module.css";
+import lightStyles from "./styles/Checkbox.light.module.css";
+import useTheme from "../../modules/home/hooks/useTheme";
 
 type Props = {
   name: string;
@@ -8,17 +10,19 @@ type Props = {
 };
 
 const Checkbox: FC<Props> = ({ name, checked, onChange }) => {
+  const { isDarkMode } = useTheme();
+  const styles = isDarkMode ? darkStyles : lightStyles;
   return (
-    <label className={darkStyles.checkboxWrapper}>
+    <label className={styles.checkboxWrapper}>
       <input
         type="checkbox"
         id={name}
         name={name}
         checked={checked}
         onChange={onChange}
-        className={darkStyles.checkboxInput}
+        className={styles.checkboxInput}
       />
-      <span className={darkStyles.customCheckbox}></span>
+      <span className={styles.customCheckbox}></span>
     </label>
   );
 };

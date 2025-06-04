@@ -1,0 +1,49 @@
+/* Swap base */
+.swap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+}
+
+/* Icon size and fill */
+.icon {
+  width: 2.5rem; /* w-10 */
+  height: 2.5rem; /* h-10 */
+  transition: opacity 0.3s ease;
+}
+
+.icon--sun {
+  fill: var(--text-primary-color-dark);
+}
+
+.icon--moon {
+  fill: var(--background-secondary-color-dark);
+}
+
+/* Mostrar solo uno de los íconos dependiendo del estado */
+.swapOn {
+  display: none;
+}
+
+.swapOff {
+  display: block;
+}
+
+/* Activación de swap según si está checked */
+.themeController:checked ~ .swapOn {
+  display: block;
+}
+
+.themeController:checked ~ .swapOff {
+  display: none;
+}
+
+/* Ocultar el input */
+.themeController {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}

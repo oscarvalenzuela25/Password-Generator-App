@@ -1,24 +1,28 @@
 import { type FC } from "react";
 import darkStyles from "./styles/PasswordVisualizer.dark.module.css";
+import lightStyles from "./styles/PasswordVisualizer.light.module.css";
 import CopyIcon from "../../../../components/icons/CopyIcon";
 import clsx from "clsx";
 import useCopy from "../../hooks/useCopy";
+import useTheme from "../../hooks/useTheme";
 
 type Props = {
   password: string;
 };
 
 const PasswordVisualizer: FC<Props> = ({ password }) => {
+  const { isDarkMode } = useTheme();
+  const styles = isDarkMode ? darkStyles : lightStyles;
   const { handleCopy } = useCopy();
   const defaultPassword = "P4$5W0rD!";
   return (
-    <div className={darkStyles.container}>
+    <div className={styles.container}>
       <p
         className={clsx(
-          darkStyles.container__text,
+          styles.container__text,
           password
-            ? darkStyles["container__text--value"]
-            : darkStyles["container__text--placeholder"]
+            ? styles["container__text--value"]
+            : styles["container__text--placeholder"]
         )}
       >
         {password || defaultPassword}
@@ -26,8 +30,8 @@ const PasswordVisualizer: FC<Props> = ({ password }) => {
       <CopyIcon
         className={clsx(
           password
-            ? darkStyles.container__iconActive
-            : darkStyles.container__iconDisabled
+            ? styles.container__iconActive
+            : styles.container__iconDisabled
         )}
         onClick={() => handleCopy(password)}
       />

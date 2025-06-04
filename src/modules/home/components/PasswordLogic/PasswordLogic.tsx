@@ -1,9 +1,12 @@
 import darkStyles from "./styles/PasswordLogic.dark.module.css";
+import lightStyles from "./styles/PasswordLogic.light.module.css";
 import { useTranslation } from "react-i18next";
-import Checkbox from "../../../../components/icons/Checkbox";
+import Checkbox from "../../../../components/Checkbox";
 import clsx from "clsx";
 import type { ColumnsStrength, Settings } from "../../types/home";
 import type { FC } from "react";
+import { darkPalette, lightPalette } from "../../../../config/palette";
+import useTheme from "../../hooks/useTheme";
 
 type Props = {
   settings: Settings;
@@ -24,20 +27,23 @@ const PasswordLogic: FC<Props> = ({
   handleChangeSettings,
   handlePasswordGenerate,
 }) => {
+  const { isDarkMode } = useTheme();
+  const styles = isDarkMode ? darkStyles : lightStyles;
+  const palette = isDarkMode ? darkPalette : lightPalette;
   const { t } = useTranslation();
 
   return (
-    <div className={darkStyles.container}>
-      <div className={darkStyles.container__rowTitle}>
-        <p className={darkStyles.rowTitle__text}>{t("home:characterLength")}</p>
-        <p className={darkStyles.rowTitle__textNumber}>
+    <div className={styles.container}>
+      <div className={styles.container__rowTitle}>
+        <p className={styles.rowTitle__text}>{t("home:characterLength")}</p>
+        <p className={styles.rowTitle__textNumber}>
           {settings.characterLength}
         </p>
       </div>
 
-      <div className={darkStyles.container__rowInput}>
+      <div className={styles.container__rowInput}>
         <input
-          className={darkStyles.rowInput__input}
+          className={styles.rowInput__input}
           id="container__rowInput"
           type="range"
           min="0"
@@ -47,12 +53,12 @@ const PasswordLogic: FC<Props> = ({
             handleChangeSettings("characterLength", Number(e.target.value))
           }
           style={{
-            background: `linear-gradient(to right, #a4ffaf 0%, #a4ffaf ${percent}%, #111016 ${percent}%, #111016 100%)`,
+            background: `linear-gradient(to right, ${palette.primaryColor} 0%, ${palette.primaryColor} ${percent}%, ${palette.backgroundPrimaryColor} ${percent}%, ${palette.backgroundPrimaryColor} 100%)`,
           }}
         />
       </div>
 
-      <div className={darkStyles.container__rowCheckbox}>
+      <div className={styles.container__rowCheckbox}>
         <Checkbox
           name="includeUppercase"
           checked={settings.upperCase}
@@ -61,15 +67,15 @@ const PasswordLogic: FC<Props> = ({
         <p
           className={clsx(
             settings.upperCase
-              ? darkStyles.rowCheckbox__textActive
-              : darkStyles.rowCheckbox__text
+              ? styles.rowCheckbox__textActive
+              : styles.rowCheckbox__text
           )}
         >
           {t("home:includeUppercase")}
         </p>
       </div>
 
-      <div className={darkStyles.container__rowCheckbox}>
+      <div className={styles.container__rowCheckbox}>
         <Checkbox
           name="includeLowercase"
           checked={settings.lowerCase}
@@ -78,15 +84,15 @@ const PasswordLogic: FC<Props> = ({
         <p
           className={clsx(
             settings.lowerCase
-              ? darkStyles.rowCheckbox__textActive
-              : darkStyles.rowCheckbox__text
+              ? styles.rowCheckbox__textActive
+              : styles.rowCheckbox__text
           )}
         >
           {t("home:includeLowercase")}
         </p>
       </div>
 
-      <div className={darkStyles.container__rowCheckbox}>
+      <div className={styles.container__rowCheckbox}>
         <Checkbox
           name="includeNumbers"
           checked={settings.numbers}
@@ -95,15 +101,15 @@ const PasswordLogic: FC<Props> = ({
         <p
           className={clsx(
             settings.numbers
-              ? darkStyles.rowCheckbox__textActive
-              : darkStyles.rowCheckbox__text
+              ? styles.rowCheckbox__textActive
+              : styles.rowCheckbox__text
           )}
         >
           {t("home:includeNumbers")}
         </p>
       </div>
 
-      <div className={darkStyles.container__rowCheckbox}>
+      <div className={styles.container__rowCheckbox}>
         <Checkbox
           name="includeSpecialCharacters"
           checked={settings.specialCharacters}
@@ -114,39 +120,37 @@ const PasswordLogic: FC<Props> = ({
         <p
           className={clsx(
             settings.specialCharacters
-              ? darkStyles.rowCheckbox__textActive
-              : darkStyles.rowCheckbox__text
+              ? styles.rowCheckbox__textActive
+              : styles.rowCheckbox__text
           )}
         >
           {t("home:includeSpecialCharacters")}
         </p>
       </div>
 
-      <div className={darkStyles.container__rowSecurity}>
-        <p className={darkStyles.rowSecurity__textSecurity}>
-          {t("home:strength")}
-        </p>
+      <div className={styles.container__rowSecurity}>
+        <p className={styles.rowSecurity__textSecurity}>{t("home:strength")}</p>
 
-        <div className={darkStyles.rowSecurity__containerRight}>
-          <p className={darkStyles.containerRight__text}>
+        <div className={styles.rowSecurity__containerRight}>
+          <p className={styles.containerRight__text}>
             {passwordStrength ? t(`home:strengths.${passwordStrength}`) : ""}
           </p>
-          <div className={darkStyles.containerRight__containerColumn}>
+          <div className={styles.containerRight__containerColumn}>
             {columnsStrength.map(({ id, active }) => (
               <div
                 key={id}
                 className={clsx(
                   (!passwordStrength || !active) &&
-                    darkStyles.containerColumn__columnBase,
+                    styles.containerColumn__columnBase,
                   passwordStrength === "weak" &&
                     active &&
-                    darkStyles.containerColumn__columnWeak,
+                    styles.containerColumn__columnWeak,
                   passwordStrength === "medium" &&
                     active &&
-                    darkStyles.containerColumn__columnMedium,
+                    styles.containerColumn__columnMedium,
                   passwordStrength === "strong" &&
                     active &&
-                    darkStyles.containerColumn__columnStrong
+                    styles.containerColumn__columnStrong
                 )}
               />
             ))}
@@ -156,11 +160,11 @@ const PasswordLogic: FC<Props> = ({
 
       <button
         type="button"
-        className={darkStyles.container__button}
+        className={styles.container__button}
         disabled={!settings.characterLength}
         onClick={handlePasswordGenerate}
       >
-        <p className={darkStyles.button__text}>{t("home:generate")}</p>
+        <p className={styles.button__text}>{t("home:generate")}</p>
       </button>
     </div>
   );
