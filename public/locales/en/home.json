@@ -15,5 +15,14 @@
   "copy": {
     "success": "Password copied to clipboard!",
     "error": "Failed to copy password to clipboard."
+  },
+  "language": {
+    "options": {
+      "en": "English",
+      "es": "Spanish",
+      "fr": "French",
+      "de": "German",
+      "zh": "Chinese"
+    }
   }
 }

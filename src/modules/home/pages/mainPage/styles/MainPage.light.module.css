@@ -10,7 +10,7 @@ body {
 
 .main {
   width: 100%;
-  height: calc(100dvh - 108px);
+  height: calc(100dvh - 36px - 87px);
   display: flex;
   margin-top: 36px;
   flex-direction: column;
@@ -19,7 +19,9 @@ body {
 }
 
 .passwordContainer {
-  width: 500px;
+  width: calc(100% - 16px);
+  max-width: 500px;
+  padding: 0 16px;
 }
 
 .passwordContainer__title {

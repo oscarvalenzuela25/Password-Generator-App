@@ -15,5 +15,14 @@
   "copy": {
     "success": "¡Contraseña copiada al portapapeles!",
     "error": "Error al copiar la contraseña al portapapeles."
+  },
+  "language": {
+    "options": {
+      "en": "Inglés",
+      "es": "Español",
+      "fr": "Francés",
+      "de": "Alemán",
+      "zh": "Chino"
+    }
   }
 }

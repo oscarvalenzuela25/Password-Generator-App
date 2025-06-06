@@ -1,0 +1,15 @@
+.wrapper {
+  background-color: var(--background-primary-color-light);
+  color: var(--text-primary-color-light);
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.select {
+  background-color: var(--background-secondary-color-light);
+  color: var(--text-primary-color-light);
+  border: 1px solid var(--text-tertiary-color-light);
+  padding: 8px;
+  border-radius: 4px;
+  width: 100%;
+}
