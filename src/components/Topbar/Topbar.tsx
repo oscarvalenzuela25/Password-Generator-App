@@ -15,9 +15,9 @@ const Topbar = () => {
   return (
     <nav className={styles.topbarContainer}>
       <div className={styles.topbarContainer__buttonsContainer}>
-        <PortfolioIcon isDarkMode={isDarkMode} url={SocialMedia.linkedin} />
+        <PortfolioIcon isDarkMode={isDarkMode} url={SocialMedia.portfolio} />
         <GithubIcon isDarkMode={isDarkMode} url={SocialMedia.github} />
-        <LinkedinIcon isDarkMode={isDarkMode} url={SocialMedia.portfolio} />
+        <LinkedinIcon isDarkMode={isDarkMode} url={SocialMedia.linkedin} />
       </div>
       <LanguageSelect />
       <ThemeController
