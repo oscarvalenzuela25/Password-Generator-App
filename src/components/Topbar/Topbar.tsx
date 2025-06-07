@@ -3,10 +3,10 @@ import lightStyles from "./styles/Topbar.light.module.css";
 import ThemeController from "../ThemeController";
 import useTheme from "../../modules/home/hooks/useTheme";
 import LanguageSelect from "../LanguageSelect";
-import GithubIcon from "../icons/GithubIcon";
-import LinkedinIcon from "../icons/LinkedinIcon";
+import GithubIcon from "../../icons/GithubIcon";
+import LinkedinIcon from "../../icons/LinkedinIcon";
 import { SocialMedia } from "../../config/socialMedia";
-import PortfolioIcon from "../icons/PortfolioIcon";
+import PortfolioIcon from "../../icons/PortfolioIcon";
 
 const Topbar = () => {
   const { isDarkMode, handleToggleTheme } = useTheme();

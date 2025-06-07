@@ -1,6 +1,6 @@
 import type { FC } from "react";
-import SunIcon from "../icons/SunIcon";
-import MoonIcon from "../icons/MoonIcon";
+import SunIcon from "../../icons/SunIcon";
+import MoonIcon from "../../icons/MoonIcon";
 import styles from "./styles.module.css";
 import clsx from "clsx";
 

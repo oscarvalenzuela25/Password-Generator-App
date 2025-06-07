@@ -1,7 +1,7 @@
 import { type FC } from "react";
 import darkStyles from "./styles/PasswordVisualizer.dark.module.css";
 import lightStyles from "./styles/PasswordVisualizer.light.module.css";
-import CopyIcon from "../../../../components/icons/CopyIcon";
+import CopyIcon from "../../../../icons/CopyIcon";
 import clsx from "clsx";
 import useCopy from "../../hooks/useCopy";
 import useTheme from "../../hooks/useTheme";
