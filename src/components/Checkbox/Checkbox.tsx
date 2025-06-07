@@ -1,7 +1,7 @@
 import React, { type FC } from "react";
 import darkStyles from "./styles/Checkbox.dark.module.css";
 import lightStyles from "./styles/Checkbox.light.module.css";
-import useTheme from "../../modules/home/hooks/useTheme";
+import useTheme from "../../features/home/hooks/useTheme";
 
 type Props = {
   name: string;

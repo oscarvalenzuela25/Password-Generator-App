@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import darkStyles from "./styles/LanguageSelect.dark.module.css";
 import lightStyles from "./styles/LanguageSelect.light.module.css";
-import useTheme from "../../modules/home/hooks/useTheme";
+import useTheme from "../../features/home/hooks/useTheme";
 import type { ChangeEvent, FC } from "react";
 
 const LanguageSelect: FC = () => {
