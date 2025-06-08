@@ -1,54 +1,106 @@
-# React + TypeScript + Vite
+# Password Generator App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Task Board Preview](https://pub-4069ca9e97d3431eb8a522f31209cde6.r2.dev/password-generator-app.png)
 
-Currently, two official plugins are available:
+## Descripcion
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Password Generator App es una aplicación diseñada para experimentar con diferentes tecnologías
 
-## Expanding the ESLint configuration
+## Tecnologias
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Recuerda crear el archivo .env como referencia del .env.example
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+### Tecnologias base
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- HTML
+- CSS
+- JavaScript (JS)
+- TypeScript (TS)
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Libreria Frontend
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+- React
+
+### Framework
+
+- N/A
+
+### Form and Validation library
+
+- N/A
+
+### Date library
+
+- N/A
+
+### State management library
+
+- N/A
+
+### Utility library
+
+- N/A
+
+### Fetch library
+
+- N/A
+
+### Hosting
+
+- Vercel
+
+### CI
+
+- N/A
+
+### Micro frontend
+
+- N/A
+
+### Package manager
+
+- NPM
+
+### Runtime
+
+- Node
+
+### Component library
+
+- N/A
+
+### Styling library
+
+- Module CSS
+
+### Testing library
+
+- N/A
+
+### Version control provider
+
+- GitHub
+
+### Building tools
+
+- Vite
+
+### Animation library
+
+- N/A
+
+### Component Documentation
+
+- N/A
+
+### IndexedDB
+
+- N/A
+
+### Router library
+
+- N/A
+
+### Other libraries
+
+- sonner
